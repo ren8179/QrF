@@ -1,9 +1,4 @@
 ﻿using QrF.Core.Helper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Caching;
 
 namespace QrF.Core.Config
@@ -49,22 +44,6 @@ namespace QrF.Core.Config
             get
             {
                 return this.Get<SettingConfig>();
-            }
-        }
-
-        public SystemConfig SystemConfig
-        {
-            get
-            {
-                return this.Get<SystemConfig>();
-            }
-        }
-
-        public UploadConfig UploadConfig
-        {
-            get
-            {
-                return this.Get<UploadConfig>();
             }
         }
     }

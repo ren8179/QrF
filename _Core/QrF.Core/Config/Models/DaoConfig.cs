@@ -12,9 +12,8 @@ namespace QrF.Core.Config
         {
         }
         #region 序列化属性
-        public String Account { get; set; }
-        public String Log { get; set; }
-        public string Work { get; set; }
+        public string Account { get; set; }
+        public string Log { get; set; }
         #endregion
     }
 }

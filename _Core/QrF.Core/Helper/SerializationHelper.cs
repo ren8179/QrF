@@ -84,7 +84,7 @@ namespace QrF.Core.Helper
             StreamWriter sWriter = new StreamWriter(stream, ecoding);
             XmlSerializerNamespaces xsn = new XmlSerializerNamespaces();
             //empty namespaces
-            xsn.Add(String.Empty, String.Empty);
+            xsn.Add(string.Empty, string.Empty);
 
             ser.Serialize(sWriter, obj, xsn);//序列化 
 
