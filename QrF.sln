@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Core", "_Core", "{9C5E58E9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QrF.Core", "_Core\QrF.Core\QrF.Core.csproj", "{DA5C89C2-ABC7-4F9C-B9E8-B6265D23CDD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QrF.Framework", "QrF.Framework\QrF.Framework.csproj", "{B84405F7-241D-4066-929C-3E8383178E60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QrF.Framework", "_Core\QrF.Framework\QrF.Framework.csproj", "{B84405F7-241D-4066-929C-3E8383178E60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
