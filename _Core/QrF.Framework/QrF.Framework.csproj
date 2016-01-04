@@ -95,11 +95,13 @@
     <Compile Include="Contract\WCFContext.cs" />
     <Compile Include="DAL\DbContextBase.cs" />
     <Compile Include="DAL\IDataRepository.cs" />
+    <Compile Include="DAL\LogDbContext.cs" />
     <Compile Include="Utility\DataTableHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\AppSettings.cs" />
     <Compile Include="Utility\Converter.cs" />
     <Compile Include="Utility\Cookie.cs" />
+    <Compile Include="Utility\Encrypt.cs" />
     <Compile Include="Utility\EnumHelper.cs" />
     <Compile Include="Utility\Fetch.cs" />
     <Compile Include="Utility\RegExp.cs" />
@@ -120,8 +122,13 @@
     <Compile Include="Web\SSOAuthAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QrF.Core\QrF.Core.csproj">
+      <Project>{da5c89c2-abc7-4f9c-b9e8-b6265d23cdd5}</Project>
+      <Name>QrF.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
