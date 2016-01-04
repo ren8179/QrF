@@ -113,6 +113,39 @@ namespace QrF.Account.BLL
             }
         }
 
+        public Guid SaveVerifyCode(string verifyCodeText)
+        {
+            if (string.IsNullOrWhiteSpace(verifyCodeText))
+                throw new BusinessException("verifyCode", "输入的验证码不能为空！");
+            using (var dbContext = new AccountDbContext())
+            {
+                var verifyCode = new VerifyCode() { VerifyText = verifyCodeText, Guid = Guid.NewGuid() };
+                dbContext.Insert<VerifyCode>(verifyCode);
+                return verifyCode.Guid;
+            }
+        }
+
+        public bool CheckVerifyCode(string verifyCodeText, Guid guid)
+        {
+            using (var dbContext = new AccountDbContext())
+            {
+                var verifyCode = dbContext.FindAll<VerifyCode>(v => v.Guid == guid && v.VerifyText == verifyCodeText).LastOrDefault();
+                if (verifyCode != null)
+                {
+                    dbContext.VerifyCodes.Remove(verifyCode);
+                    dbContext.SaveChanges();
+
+                    //清除验证码大于2分钟还没请求的
+                    var expiredTime = DateTime.Now.AddMinutes(-2);
+                    dbContext.VerifyCodes.Where(v => v.CreateTime < expiredTime).Delete();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
         #endregion
 
         #region User

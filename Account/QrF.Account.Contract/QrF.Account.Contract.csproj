@@ -40,6 +40,7 @@
     <Compile Include="Model\Requests.cs" />
     <Compile Include="Model\Role.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Model\VerifyCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

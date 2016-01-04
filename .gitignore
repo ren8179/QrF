@@ -7,3 +7,13 @@
 /QrF/obj/Debug
 /_Core/QrF.Core/obj/Debug
 /_Core/QrF.Core/bin/Debug
+/Account/QrF.Account.BLL/bin/Debug
+/Account/QrF.Account.Contract/bin/Debug
+/Account/QrF.Account.BLL/obj/Debug
+/Account/QrF.Account.Contract/obj/Debug
+/Account/QrF.Account.DAL/bin/Debug
+/Account/QrF.Account.DAL/obj/Debug
+/_Core/QrF.Framework/bin/Debug
+/_Core/QrF.Framework/obj/Debug
+*.suo
+*.pdb

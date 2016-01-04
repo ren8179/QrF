@@ -13,6 +13,9 @@ namespace QrF.Account.Contract
         void Logout(Guid token);
         void ModifyPwd(User user);
 
+        Guid SaveVerifyCode(string verifyCodeText);
+        bool CheckVerifyCode(string verifyCodeText, Guid guid);
+
         User GetUser(int id);
         User GetUserByIp(string ip);
         IEnumerable<User> GetUserList(UserRequest request = null);
