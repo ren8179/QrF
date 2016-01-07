@@ -86,7 +86,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiControllerBase.cs" />
+    <Compile Include="AdminCookieContext.cs" />
+    <Compile Include="AdminUserContext.cs" />
+    <Compile Include="WebApi\ApiControllerBase.cs" />
     <Compile Include="AuthorizeFilterAttribute.cs" />
     <Compile Include="AuthorizeIgnoreAttribute.cs" />
     <Compile Include="ControllerBase.cs" />
@@ -108,6 +110,9 @@
     <Compile Include="SSOAuthAttribute.cs" />
     <Compile Include="UserContext.cs" />
     <Compile Include="VerifyCodeHelper.cs" />
+    <Compile Include="WebApi\Filter\ExceptionAttribute.cs" />
+    <Compile Include="WebApi\Filter\ValidationMessageAttribute.cs" />
+    <Compile Include="WebApi\JsonResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Account\QrF.Account.Contract\QrF.Account.Contract.csproj">
