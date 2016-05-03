@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.Remoting.Messaging;
 using System.Threading.Tasks;
 
 namespace QrF.Framework.DAL
@@ -90,7 +91,8 @@ namespace QrF.Framework.DAL
                 if (auditableAttr == null)
                     continue;
 
-                var operaterName = WCFContext.Current.Operater.Name;
+                var context = CallContext.HostContext as System.Web.HttpContext;
+                var operaterName = context == null ? WCFContext.Current.Operater.Name : context.User.Identity.Name;
 
                 Task.Factory.StartNew(() =>
                 {
