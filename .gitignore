@@ -17,3 +17,7 @@
 /_Core/QrF.Framework/obj/Debug
 *.suo
 *.pdb
+/Account/QrF.Account/obj
+/Account/QrF.Account/bin/Release
+/Sqlite/QrF.Sqlite/bin/Debug
+/Sqlite/QrF.Sqlite/obj/Debug

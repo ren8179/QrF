@@ -1,4 +1,5 @@
 ﻿using QrF.Account.Contract;
+using QrF.Account.Service;
 using QrF.Core.Config;
 using System;
 using System.Web.Http;

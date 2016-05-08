@@ -115,9 +115,9 @@
     <Compile Include="WebApi\JsonResult.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Account\QrF.Account.Contract\QrF.Account.Contract.csproj">
-      <Project>{ee96c763-3d38-4693-b93f-b738b959388f}</Project>
-      <Name>QrF.Account.Contract</Name>
+    <ProjectReference Include="..\..\Account\QrF.Account\QrF.Account.csproj">
+      <Project>{C077505C-5C2B-4F21-99DA-B0A477BA71A9}</Project>
+      <Name>QrF.Account</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\_Core\QrF.Core\QrF.Core.csproj">
       <Project>{da5c89c2-abc7-4f9c-b9e8-b6265d23cdd5}</Project>

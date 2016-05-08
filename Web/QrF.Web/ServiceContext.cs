@@ -1,4 +1,4 @@
-﻿using QrF.Account.Contract;
+﻿using QrF.Account.Service;
 using QrF.Core.Cache;
 using QrF.Core.Service;
 

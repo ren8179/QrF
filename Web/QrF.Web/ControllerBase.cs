@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using QrF.Account.Contract;
+using QrF.Account.Service;
 using QrF.Core.Log;
 using QrF.Framework.Contract;
 using QrF.Framework.Utility;

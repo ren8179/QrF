@@ -1,0 +1,16 @@
+﻿using QrF.Framework.Contract;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace QrF.Account.Contract
+{
+    [Serializable]
+    [Table("VerifyCode")]
+    public class VerifyCode : ModelBase
+    {
+        public Guid Guid { get; set; }
+        [StringLength(50)]
+        public string VerifyText { get; set; }
+    }
+}

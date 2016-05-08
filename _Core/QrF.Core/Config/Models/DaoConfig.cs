@@ -13,6 +13,7 @@ namespace QrF.Core.Config
         }
         #region 序列化属性
         public string Account { get; set; }
+        public string Sqlite { get; set; }
         public string Log { get; set; }
         #endregion
     }
