@@ -19,39 +19,29 @@ namespace QrF.Account.Contract
         /// <summary>
         /// 登录名
         /// </summary>
-        [Required(ErrorMessage = "登录名不能为空")]
-        [StringLength(50)]
         public string LoginName { get; set; }
 
         /// <summary>
         /// 密码，使用MD5加密
         /// </summary>
-        [Required]
-        [StringLength(100)]
         public string Password { get; set; }
 
-        [StringLength(50)]
         public string UserName { get; set; }
         public string AppId { get; set; }
         public string PartnerId { get; set; }
         /// <summary>
         /// 手机号
         /// </summary>
-        [RegularExpression(@"^[1-9]{1}\d{10}$", ErrorMessage = "不是有效的手机号码")]
-        [StringLength(50)]
         public string Mobile { get; set; }
 
         /// <summary>
         /// 邮箱
         /// </summary>
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "电子邮件地址无效")]
-        [StringLength(50)]
         public string Email { get; set; }
 
         /// <summary>
         /// IP地址
         /// </summary>
-        [StringLength(50)]
         public string IpAddress { get; set; }
 
         public bool IsActive { get; set; }

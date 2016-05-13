@@ -10,10 +10,7 @@ namespace QrF.Account.Contract
     [Table("Role")]
     public class Role : ModelBase
     {
-        [Required(ErrorMessage = "角色名不能为空")]
-        [StringLength(50)]
         public string Name { get; set; }
-        [StringLength(300)]
         public string Info { get; set; }
 
         public virtual List<User> Users { get; set; }

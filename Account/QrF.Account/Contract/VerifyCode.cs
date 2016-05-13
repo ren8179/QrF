@@ -10,7 +10,6 @@ namespace QrF.Account.Contract
     public class VerifyCode : ModelBase
     {
         public Guid Guid { get; set; }
-        [StringLength(50)]
         public string VerifyText { get; set; }
     }
 }

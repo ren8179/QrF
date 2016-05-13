@@ -39,6 +39,15 @@ namespace QrF.Framework.DAL
             return entity;
         }
 
+        public async Task<T> UpdateAsync<T>(T entity) where T : class, new()
+        {
+            var set = this.Set<T>();
+            set.Attach(entity);
+            this.Entry<T>(entity).State = EntityState.Modified;
+            await base.SaveChangesAsync();
+            return entity;
+        }
+
         public T Insert<T>(T entity) where T : ModelBase
         {
             this.Set<T>().Add(entity);
@@ -46,10 +55,23 @@ namespace QrF.Framework.DAL
             return entity;
         }
 
+        public async Task<T> InsertAsync<T>(T entity) where T : class, new ()
+        {
+            this.Set<T>().Add(entity);
+            await base.SaveChangesAsync();
+            return entity;
+        }
+
         public void Delete<T>(T entity) where T : ModelBase
         {
             this.Entry<T>(entity).State = EntityState.Deleted;
             this.SaveChanges();
+        }
+
+        public async Task DeleteAsync<T>(T entity) where T :class, new()
+        {
+            this.Entry<T>(entity).State = EntityState.Deleted;
+            await base.SaveChangesAsync();
         }
 
         public T Find<T>(params object[] keyValues) where T : ModelBase

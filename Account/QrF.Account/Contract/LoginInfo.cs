@@ -30,9 +30,7 @@ namespace QrF.Account.Contract
         public Guid LoginToken { get; set; }
         public DateTime LastAccessTime { get; set; }
         public int UserID { get; set; }
-        [StringLength(30)]
         public string LoginName { get; set; }
-        [StringLength(90)]
         public string ClientIP { get; set; }
 
         public int EnumLoginAccountType { get; set; }
